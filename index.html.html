@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Estratégico de Captação & Calendário Anual - ILPI Santana do Paraíso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .tooltip-card {
+            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+    <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-brand-500 p-2.5 rounded-xl text-white shadow-lg">
+                    <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">Portal Estratégico & Calendário Anual de Captação</h1>
+                    <p class="text-xs text-slate-400">ILPI Santana do Paraíso • Vale do Aço - MG • Ciclo Estratégico 2026/2027</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    CAC Ativo no CMDPI
+                </span>
+                <button onclick="window.print()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition flex items-center gap-2">
+                    <i class="fa-solid fa-print"></i> Imprimir / PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-8">
+
+        <!-- Top Strategic Highlights Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:border-amber-300 transition">
+                <div class="p-3 bg-amber-50 text-amber-600 rounded-xl">
+                    <i class="fa-solid fa-crown text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Foco Prioritário #1</p>
+                    <p class="text-sm font-bold text-slate-800">FMDPI Santana do Paraíso</p>
+                    <p class="text-xs text-amber-600 font-medium">1º Semestre (Mar-Mai)</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:border-blue-300 transition">
+                <div class="p-3 bg-blue-50 text-blue-600 rounded-xl">
+                    <i class="fa-solid fa-industry text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Aposta Regional</p>
+                    <p class="text-sm font-bold text-slate-800">Instituto Usiminas</p>
+                    <p class="text-xs text-blue-600 font-medium">Captação IRPJ (CAC)</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:border-emerald-300 transition">
+                <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl">
+                    <i class="fa-solid fa-utensils text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Alimentação & Custeio</p>
+                    <p class="text-sm font-bold text-slate-800">PAS (Salvador Arena)</p>
+                    <p class="text-xs text-emerald-600 font-medium">Março/Abril • Doação Direta</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:border-purple-300 transition">
+                <div class="p-3 bg-purple-50 text-purple-600 rounded-xl">
+                    <i class="fa-solid fa-globe text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Grandes Obras/Vans</p>
+                    <p class="text-sm font-bold text-slate-800">Programa APC (Japão)</p>
+                    <p class="text-xs text-purple-600 font-medium">Fluxo Contínuo Anual</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-b border-slate-200">
+            <nav class="-mb-px flex space-x-8 overflow-x-auto custom-scrollbar">
+                <button onclick="switchTab('calendario')" id="tab-calendario" class="tab-btn border-brand-500 text-brand-600 whitespace-nowrap py-4 px-1 border-b-2 font-bold text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-calendar-days text-brand-500"></i> Calendário Panorâmico Anual
+                </button>
+                <button onclick="switchTab('radar')" id="tab-radar" class="tab-btn border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-radar"></i> Radar de Oportunidades
+                </button>
+                <button onclick="switchTab('ranking')" id="tab-ranking" class="tab-btn border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-list-ol"></i> Matriz de Priorização
+                </button>
+                <button onclick="switchTab('plano')" id="tab-plano" class="tab-btn border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-timeline"></i> Plano Executivo Trimestral
+                </button>
+            </nav>
+        </div>
+
+        <div id="content-calendario" class="tab-content space-y-6">
+            
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-week text-brand-600"></i>
+                            Visão Panorâmica Anual de Janelas de Captação
+                        </h2>
+                        <p class="text-xs text-slate-500">
+                            Passe o mouse ou toque nos marcadores coloridos de cada mês para visualizar os detalhes de cada oportunidade.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="text-xs font-bold text-slate-400 uppercase mr-1">Filtrar Fonte:</span>
+                        <button onclick="filterCalendarCategory('all')" class="cal-filter-btn active bg-brand-600 text-white px-3 py-1 rounded-lg text-xs font-semibold shadow-sm transition">
+                            Todas
+                        </button>
+                        <button onclick="filterCalendarCategory('municipal')" class="cal-filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1 rounded-lg text-xs font-medium transition">
+                            FMDPI / Municipal
+                        </button>
+                        <button onclick="filterCalendarCategory('irpj')" class="cal-filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1 rounded-lg text-xs font-medium transition">
+                            Leis / IRPJ (CAC)
+                        </button>
+                        <button onclick="filterCalendarCategory('direta')" class="cal-filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1 rounded-lg text-xs font-medium transition">
+                            Doação Direta
+                        </button>
+                        <button onclick="filterCalendarCategory('internacional')" class="cal-filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1 rounded-lg text-xs font-medium transition">
+                            Internacional
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-wrap gap-4 text-xs font-medium">
+                    <span class="text-slate-500 font-bold uppercase tracking-wider text-[11px]">Legenda de Marcadores:</span>
+                    <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-amber-500 ring-2 ring-amber-200"></span> Fundo Municipal / FMDPI (Santana do Paraíso)</span>
+                    <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-blue-600 ring-2 ring-blue-200"></span> Leis de Incentivo / CAC (Usiminas / Cemig / Itaú)</span>
+                    <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-emerald-600 ring-2 ring-emerald-200"></span> Doação Direta (PAS & PAPS Salvador Arena)</span>
+                    <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-indigo-600 ring-2 ring-indigo-200"></span> Regional / Cooperativa (Sicredi Leste MG)</span>
+                    <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-purple-600 ring-2 ring-purple-200"></span> Internacional (Consulado Geral do Japão - APC)</span>
+                    <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-sky-500 ring-2 ring-sky-200"></span> Acompanhamento Permanente</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="calendarYearGrid">
+                <!-- Months generated dynamically via JavaScript -->
+            </div>
+
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-6 shadow-md space-y-4">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-brand-500/20 text-brand-400 rounded-xl border border-brand-500/30">
+                            <i class="fa-solid fa-infinity text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base">Oportunidades de Fluxo Contínuo (Abertas Todo o Ano)</h3>
+                            <p class="text-xs text-slate-300">Programas sem prazo fixo de encerramento que exigem submissão de projeto pronto</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs pt-2">
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/60 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-amber-400">Programa APC (Consulado do Japão)</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] bg-purple-500/20 text-purple-300 border border-purple-500/30">Internacional</span>
+                        </div>
+                        <p class="text-slate-300">Até US$ 100 mil para obras físicas de acessibilidade, veículos adaptados e equipamentos médicos para ILPI.</p>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/60 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-blue-400">Plataforma Instituto Usiminas</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] bg-blue-500/20 text-blue-300 border border-blue-500/30">Vale do Aço</span>
+                        </div>
+                        <p class="text-slate-300">Submissão contínua de projetos aprovados no CMDPI com CAC ativo para apuração fiscal corporativa.</p>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/60 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-emerald-400">Acompanhamento CMDPI Paraíso</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Municipal</span>
+                        </div>
+                        <p class="text-slate-300">Presença quinzenal/mensal nas sessões ordinárias do conselho para atuar de forma antecipada nos editais.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="content-radar" class="tab-content space-y-6 hidden">
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-4 items-center justify-between">
+                <div class="flex flex-wrap gap-2 w-full md:w-auto">
+                    <button onclick="filterOpportunities('all')" class="filter-btn active bg-brand-50 text-brand-600 border-brand-200 px-3 py-1.5 rounded-lg text-xs font-semibold border transition">
+                        Todos
+                    </button>
+                    <button onclick="filterOpportunities('cac')" class="filter-btn bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-lg text-xs font-medium border transition">
+                        Exige CAC (Leis de Incentivo)
+                    </button>
+                    <button onclick="filterOpportunities('direta')" class="filter-btn bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-lg text-xs font-medium border transition">
+                        Doação Direta (Sem CAC)
+                    </button>
+                    <button onclick="filterOpportunities('local')" class="filter-btn bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 px-3 py-1.5 rounded-lg text-xs font-medium border transition">
+                        Local / Regional (MG & Vale do Aço)
+                    </button>
+                </div>
+                <div class="w-full md:w-64">
+                    <div class="relative">
+                        <i class="fa-solid fa-search absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+                        <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="Buscar oportunidade..." class="w-full pl-8 pr-3 py-1.5 text-xs border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="opportunitiesGrid">
+
+                <!-- Card 1: FMDPI Santana do Paraíso -->
+                <div class="opp-card bg-white rounded-2xl border border-amber-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between space-y-4 relative overflow-hidden" data-category="cac local">
+                    <div class="absolute top-0 right-0 bg-amber-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                        #1 Destaque Local
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">Santana do Paraíso</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">Exige CAC</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base leading-snug">Chamamento Público FMDPI</h3>
+                        <p class="text-xs text-slate-500 font-medium">Prefeitura & CMDPI de Santana do Paraíso</p>
+                        
+                        <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                            Aporte financeiro direto do Fundo Municipal do Idoso e/ou autorização para captação via renúncia fiscal (CAC) direcionado exclusivamente às OSCs ativas no município.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2 pt-3 border-t border-slate-100 text-xs">
+                        <div class="flex justify-between text-slate-500">
+                            <span>Prazo Previsto:</span>
+                            <span class="font-bold text-amber-600">1º Semestre (Mar-Mai)</span>
+                        </div>
+                        <div class="flex justify-between text-slate-500">
+                            <span>Tipo de Apoio:</span>
+                            <span class="font-semibold text-slate-800">Termo de Fomento / CAC</span>
+                        </div>
+                    </div>
+
+                    <a href="https://santanadoparaiso.mg.gov.br/" target="_blank" class="w-full py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-xs font-semibold text-center transition flex items-center justify-center gap-2">
+                        Acessar Portal Oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2: Instituto Usiminas -->
+                <div class="opp-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between space-y-4" data-category="cac local">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">Vale do Aço</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">Exige CAC</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base leading-snug">Investimento Social Usiminas</h3>
+                        <p class="text-xs text-slate-500 font-medium">Instituto Usiminas</p>
+                        
+                        <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                            Destinação de IRPJ corporativo para projetos chancelados pelo Fundo do Idoso. Prioridade máxima por proximidade territorial com Ipatinga/Paraíso.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2 pt-3 border-t border-slate-100 text-xs">
+                        <div class="flex justify-between text-slate-500">
+                            <span>Prazo / Janela:</span>
+                            <span class="font-bold text-slate-700">Fluxo Contínuo / 2º Sem</span>
+                        </div>
+                        <div class="flex justify-between text-slate-500">
+                            <span>Tipo de Apoio:</span>
+                            <span class="font-semibold text-slate-800">Aporte Fiscal IRPJ</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.usiminas.com/pages/quer-enviar-seu-pedido-de-patrocinio-ou-doacao/" target="_blank" class="w-full py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold text-center transition flex items-center justify-center gap-2">
+                        Página de Patrocínio <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3: PAS Fundação Salvador Arena -->
+                <div class="opp-card bg-white rounded-2xl border border-emerald-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between space-y-4" data-category="direta">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Nacional</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">Doação Direta</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base leading-snug">Programa Alimentação Saudável (PAS)</h3>
+                        <p class="text-xs text-slate-500 font-medium">Fundação Salvador Arena (FSA)</p>
+                        
+                        <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                            Subvenção financeira para custeio direto de hortifrúti, refeições especiais, suplementação e reestruturação de cozinha industrial da ILPI.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2 pt-3 border-t border-slate-100 text-xs">
+                        <div class="flex justify-between text-slate-500">
+                            <span>Inscrição:</span>
+                            <span class="font-bold text-emerald-600">Março / Abril (Anual)</span>
+                        </div>
+                        <div class="flex justify-between text-slate-500">
+                            <span>Tipo de Apoio:</span>
+                            <span class="font-semibold text-slate-800">Subvenção + Assessoria</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.pasfsa.com.br/" target="_blank" class="w-full py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-semibold text-center transition flex items-center justify-center gap-2">
+                        Edital PAS <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4: Fundo Social Sicredi -->
+                <div class="opp-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between space-y-4" data-category="direta local">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">Leste de MG</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">Doação Direta</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base leading-snug">Fundo Social Sicredi</h3>
+                        <p class="text-xs text-slate-500 font-medium">Sicredi Leste de MG</p>
+                        
+                        <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                            Aporte direto para pequenos projetos comunitários, aquisição de móveis hospitalares, poltronas para idosos e equipamentos de apoio.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2 pt-3 border-t border-slate-100 text-xs">
+                        <div class="flex justify-between text-slate-500">
+                            <span>Janela:</span>
+                            <span class="font-bold text-slate-700">1º Trimestre (Fev-Abr)</span>
+                        </div>
+                        <div class="flex justify-between text-slate-500">
+                            <span>Aporte Estimado:</span>
+                            <span class="font-semibold text-slate-800">R$ 10k a R$ 50k</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.sicredi.com.br/na-pratica/fundo-social/" target="_blank" class="w-full py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold text-center transition flex items-center justify-center gap-2">
+                        Fundo Social Sicredi <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 5: Consulado do Japão APC -->
+                <div class="opp-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between space-y-4" data-category="direta">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-50 text-indigo-700">Internacional</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">Doação Direta</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base leading-snug">Programa APC (Consulado Japão)</h3>
+                        <p class="text-xs text-slate-500 font-medium">Governo do Japão</p>
+                        
+                        <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                            Subvenção não reembolsável excelente para reformas prediais de grande porte, adaptação de acessibilidade e compra de vans adaptadas.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2 pt-3 border-t border-slate-100 text-xs">
+                        <div class="flex justify-between text-slate-500">
+                            <span>Prazo:</span>
+                            <span class="font-bold text-indigo-600">Fluxo Contínuo</span>
+                        </div>
+                        <div class="flex justify-between text-slate-500">
+                            <span>Teto de Apoio:</span>
+                            <span class="font-semibold text-slate-800">Até R$ 400 mil</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.br.emb-japan.go.jp/itpr_pt/apc.html" target="_blank" class="w-full py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold text-center transition flex items-center justify-center gap-2">
+                        Edital APC Japão <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 6: PAPS Salvador Arena -->
+                <div class="opp-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between space-y-4" data-category="direta">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Nacional</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">Doação Direta</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base leading-snug">Programa Apoio a Projetos (PAPS)</h3>
+                        <p class="text-xs text-slate-500 font-medium">Fundação Salvador Arena</p>
+                        
+                        <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                            Subvenção robusta para grandes obras de infraestrutura, ampliações, climatização, acessibilidade e compras de equipamentos hospitalares.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2 pt-3 border-t border-slate-100 text-xs">
+                        <div class="flex justify-between text-slate-500">
+                            <span>Inscrição:</span>
+                            <span class="font-bold text-slate-700">Junho / Julho</span>
+                        </div>
+                        <div class="flex justify-between text-slate-500">
+                            <span>Teto de Apoio:</span>
+                            <span class="font-semibold text-slate-800">Até R$ 380 mil</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.papsfsa.com.br/" target="_blank" class="w-full py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold text-center transition flex items-center justify-center gap-2">
+                        Programa PAPS <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="content-ranking" class="tab-content space-y-6 hidden">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="p-6 border-b border-slate-100 flex flex-col md:flex-row justify-between md:items-center gap-4">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900">Matriz Dinâmica de Priorização Estratégica</h2>
+                        <p class="text-xs text-slate-500">Ranking baseado na chance real de aprovação considerando o perfil da ILPI em Santana do Paraíso</p>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs">
+                        <thead>
+                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 uppercase font-bold tracking-wider">
+                                <th class="py-3 px-4">Rank</th>
+                                <th class="py-3 px-4">Oportunidade</th>
+                                <th class="py-3 px-4">Origem / Tipo</th>
+                                <th class="py-3 px-4 text-center">Exige CAC?</th>
+                                <th class="py-3 px-4 text-center">Chance Real</th>
+                                <th class="py-3 px-4">Estratégia Executiva</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 font-medium">
+                            <tr class="hover:bg-slate-50/80 transition">
+                                <td class="py-3 px-4 font-bold text-amber-600">#1</td>
+                                <td class="py-3 px-4">
+                                    <span class="font-bold text-slate-900 block">FMDPI Santana do Paraíso</span>
+                                    <span class="text-[10px] text-slate-400">Prefeitura / CMDPI</span>
+                                </td>
+                                <td class="py-3 px-4">Municipal / Fundo Público</td>
+                                <td class="py-3 px-4 text-center">
+                                    <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold">SIM</span>
+                                </td>
+                                <td class="py-3 px-4 text-center text-amber-500 font-bold">⭐⭐⭐⭐⭐</td>
+                                <td class="py-3 px-4 text-slate-600">Acompanhar reuniões do CMDPI local e submeter projeto no chamamento de 1º semestre.</td>
+                            </tr>
+
+                            <tr class="hover:bg-slate-50/80 transition">
+                                <td class="py-3 px-4 font-bold text-slate-700">#2</td>
+                                <td class="py-3 px-4">
+                                    <span class="font-bold text-slate-900 block">Instituto Usiminas</span>
+                                    <span class="text-[10px] text-slate-400">Usiminas / Vale do Aço</span>
+                                </td>
+                                <td class="py-3 px-4">Regional / IRPJ</td>
+                                <td class="py-3 px-4 text-center">
+                                    <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold">SIM</span>
+                                </td>
+                                <td class="py-3 px-4 text-center text-amber-500 font-bold">⭐⭐⭐⭐⭐</td>
+                                <td class="py-3 px-4 text-slate-600">Apresentar o CAC e portfólio da ILPI ao Instituto Usiminas para alocação de IRPJ no fim de ano.</td>
+                            </tr>
+
+                            <tr class="hover:bg-slate-50/80 transition">
+                                <td class="py-3 px-4 font-bold text-slate-700">#3</td>
+                                <td class="py-3 px-4">
+                                    <span class="font-bold text-slate-900 block">PAS (Fundação Salvador Arena)</span>
+                                    <span class="text-[10px] text-slate-400">Alimentação & Nutrição</span>
+                                </td>
+                                <td class="py-3 px-4">Nacional / Doação Direta</td>
+                                <td class="py-3 px-4 text-center">
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600">NÃO</span>
+                                </td>
+                                <td class="py-3 px-4 text-center text-amber-500 font-bold">⭐⭐⭐⭐⭐</td>
+                                <td class="py-3 px-4 text-slate-600">Submeter projeto nutricional em Março para custeio de refeições e adequação de cozinha.</td>
+                            </tr>
+
+                            <tr class="hover:bg-slate-50/80 transition">
+                                <td class="py-3 px-4 font-bold text-slate-700">#4</td>
+                                <td class="py-3 px-4">
+                                    <span class="font-bold text-slate-900 block">Fundo Social Sicredi</span>
+                                    <span class="text-[10px] text-slate-400">Sicredi Leste de MG</span>
+                                </td>
+                                <td class="py-3 px-4">Regional / Doação Direta</td>
+                                <td class="py-3 px-4 text-center">
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600">NÃO</span>
+                                </td>
+                                <td class="py-3 px-4 text-center text-amber-500 font-bold">⭐⭐⭐⭐⭐</td>
+                                <td class="py-3 px-4 text-slate-600">Cadastrar proposta no 1º trimestre para compra de camas hospitalares e poltronas do papai.</td>
+                            </tr>
+
+                            <tr class="hover:bg-slate-50/80 transition">
+                                <td class="py-3 px-4 font-bold text-slate-700">#5</td>
+                                <td class="py-3 px-4">
+                                    <span class="font-bold text-slate-900 block">Programa APC (Embaixada Japão)</span>
+                                    <span class="text-[10px] text-slate-400">Cooperação Internacional</span>
+                                </td>
+                                <td class="py-3 px-4">Internacional / Doação Direta</td>
+                                <td class="py-3 px-4 text-center">
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600">NÃO</span>
+                                </td>
+                                <td class="py-3 px-4 text-center text-amber-500 font-bold">⭐⭐⭐⭐</td>
+                                <td class="py-3 px-4 text-slate-600">Elaborar projeto arquitetônico de acessibilidade e submeter em fluxo contínuo.</td>
+                            </tr>
+
+                            <tr class="hover:bg-slate-50/80 transition">
+                                <td class="py-3 px-4 font-bold text-slate-700">#6</td>
+                                <td class="py-3 px-4">
+                                    <span class="font-bold text-slate-900 block">Edital Cemig</span>
+                                    <span class="text-[10px] text-slate-400">Fundo do Idoso MG</span>
+                                </td>
+                                <td class="py-3 px-4">Estadual / IRPJ</td>
+                                <td class="py-3 px-4 text-center">
+                                    <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold">SIM</span>
+                                </td>
+                                <td class="py-3 px-4 text-center text-amber-500 font-bold">⭐⭐⭐⭐</td>
+                                <td class="py-3 px-4 text-slate-600">Cadastrar projeto aprovado no FMDPI na plataforma de chamadas da Cemig.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-plano" class="tab-content space-y-6 hidden">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-6">
+                <div>
+                    <h2 class="text-lg font-bold text-slate-900">Plano de Monitoramento Executive Trimestral</h2>
+                    <p class="text-xs text-slate-500">Cronograma executivo por quadrimestre e prioridade territorial</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Q4 -->
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-xs text-slate-900 uppercase">4º Trimestre</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">Urgente</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-2 list-disc pl-4">
+                            <li><strong class="text-slate-800">CMDPI Paraíso:</strong> Mapear minutagem do edital local e renovação de certidões.</li>
+                            <li><strong class="text-slate-800">Captação IRPJ:</strong> Protocolar CAC junto à Usiminas e empresas do Vale do Aço para o fechamento fiscal de dezembro.</li>
+                            <li><strong class="text-slate-800">Consulado Japão:</strong> Finalizar orçamento e planta de acessibilidade da ILPI.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Q1 -->
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-xs text-slate-900 uppercase">1º Trimestre</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Execução</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-2 list-disc pl-4">
+                            <li><strong class="text-slate-800">FMDPI Paraíso:</strong> Submeter proposta técnica assim que publicado o Chamamento Municipal.</li>
+                            <li><strong class="text-slate-800">PAS (Salvador Arena):</strong> Inscrever projeto de custeio alimentar em Março.</li>
+                            <li><strong class="text-slate-800">Sicredi Leste MG:</strong> Inscrever projeto no Fundo Social da cooperativa.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-xs text-slate-900 uppercase">2º Trimestre</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-800">Expansão</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-2 list-disc pl-4">
+                            <li><strong class="text-slate-800">PAPS (Salvador Arena):</strong> Submeter projeto de reforma estrutural de R$ 380 mil em Junho.</li>
+                            <li><strong class="text-slate-800">Itaú Viver Mais:</strong> Cadastrar projeto chancelado pelo FMDPI no edital nacional.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Interactive Calendar Tooltip Box -->
+    <div id="calendarTooltip" class="fixed hidden z-50 bg-slate-900 text-white text-xs p-4 rounded-xl shadow-2xl max-w-xs border border-slate-700 pointer-events-none transition-all duration-150">
+        <div id="tooltipContent" class="space-y-1.5"></div>
+    </div>
+
+    <footer class="bg-slate-900 border-t border-slate-800 text-slate-400 py-6 text-xs text-center mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>Relatório Técnico Consolidado & Calendário Anual • ILPI Santana do Paraíso - MG</p>
+            <p class="mt-1 text-slate-500">Base de dados e monitoramento estratégico em tempo real</p>
+        </div>
+    </footer>
+
+    <script>
+        const calendarEvents = [
+            {
+                id: 'fmdpi',
+                title: 'Chamamento FMDPI Santana do Paraíso',
+                org: 'Prefeitura / CMDPI',
+                category: 'municipal',
+                type: 'Fundo Municipal / CAC',
+                months: [3, 4, 5],
+                recurrent: true,
+                badgeBg: 'bg-amber-500',
+                badgeText: 'text-amber-900',
+                borderColor: 'border-amber-400',
+                description: 'Chamamento direto do município para projetos de acolhimento e saúde geriátrica.'
+            },
+            {
+                id: 'pas',
+                title: 'PAS (Fundação Salvador Arena)',
+                org: 'Fundação Salvador Arena',
+                category: 'direta',
+                type: 'Doação Direta (Alimentação)',
+                months: [3, 4],
+                recurrent: true,
+                badgeBg: 'bg-emerald-600',
+                badgeText: 'text-emerald-900',
+                borderColor: 'border-emerald-400',
+                description: 'Subvenção para custeio de refeições, dietas especiais e reestruturação da cozinha.'
+            },
+            {
+                id: 'sicredi',
+                title: 'Fundo Social Sicredi Leste MG',
+                org: 'Cooperativa Sicredi',
+                category: 'direta',
+                type: 'Doação Direta Regional',
+                months: [2, 3, 4],
+                recurrent: true,
+                badgeBg: 'bg-indigo-600',
+                badgeText: 'text-indigo-900',
+                borderColor: 'border-indigo-400',
+                description: 'Compra de móveis, camas hospitalares e poltronas para idosos.'
+            },
+            {
+                id: 'itau',
+                title: 'Edital Itaú Viver Mais',
+                org: 'Fundação Itaú',
+                category: 'irpj',
+                type: 'Leis de Incentivo (CAC)',
+                months: [5, 6],
+                recurrent: true,
+                badgeBg: 'bg-blue-600',
+                badgeText: 'text-blue-900',
+                borderColor: 'border-blue-400',
+                description: 'Financiamento nacional de projetos chancelados pelo FMDPI.'
+            },
+            {
+                id: 'paps',
+                title: 'PAPS (Fundação Salvador Arena)',
+                org: 'Fundação Salvador Arena',
+                category: 'direta',
+                type: 'Doação Direta (Grandes Obras)',
+                months: [6, 7],
+                recurrent: true,
+                badgeBg: 'bg-emerald-600',
+                badgeText: 'text-emerald-900',
+                borderColor: 'border-emerald-400',
+                description: 'Até R$ 380 mil para reformas prediais, acessibilidade e ampliações da ILPI.'
+            },
+            {
+                id: 'usiminas',
+                title: 'Investimento Social Usiminas',
+                org: 'Instituto Usiminas',
+                category: 'irpj',
+                type: 'Aporte Fiscal IRPJ (Vale do Aço)',
+                months: [9, 10, 11, 12],
+                recurrent: true,
+                badgeBg: 'bg-blue-600',
+                badgeText: 'text-blue-900',
+                borderColor: 'border-blue-400',
+                description: 'Alocação do IRPJ corporativo Usiminas com foco direto no Vale do Aço.'
+            },
+            {
+                id: 'cemig',
+                title: 'Edital Cemig Fundo Idoso',
+                org: 'Cemig',
+                category: 'irpj',
+                type: 'Aporte Fiscal IRPJ (MG)',
+                months: [1, 7],
+                recurrent: true,
+                badgeBg: 'bg-blue-600',
+                badgeText: 'text-blue-900',
+                borderColor: 'border-blue-400',
+                description: 'Recursos estaduais via renúncia fiscal para saúde e acessibilidade em ILPIs.'
+            },
+            {
+                id: 'cmdpi_perm',
+                title: 'Acompanhamento Reuniões CMDPI',
+                org: 'CMDPI Santana do Paraíso',
+                category: 'municipal',
+                type: 'Ação Institucional',
+                months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                recurrent: true,
+                badgeBg: 'bg-sky-500',
+                badgeText: 'text-sky-900',
+                borderColor: 'border-sky-300',
+                description: 'Acompanhamento contínuo das sessões ordinárias e certidões municipais.'
+            },
+            {
+                id: 'apc_japan',
+                title: 'Programa APC (Embaixada Japão)',
+                org: 'Consulado Geral do Japão',
+                category: 'internacional',
+                type: 'Cooperação Internacional',
+                months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                recurrent: true,
+                badgeBg: 'bg-purple-600',
+                badgeText: 'text-purple-900',
+                borderColor: 'border-purple-400',
+                description: 'Fluxo contínuo até R$ 400 mil para vans adaptadas e reformas estruturais.'
+            }
+        ];
+
+        const monthNames = [
+            'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+            'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+        ];
+
+        let currentCalendarFilter = 'all';
+
+        function renderCalendar() {
+            const gridContainer = document.getElementById('calendarYearGrid');
+            gridContainer.innerHTML = '';
+
+            monthNames.forEach((month, index) => {
+                const monthNum = index + 1;
+                
+                const eventsForMonth = calendarEvents.filter(ev => {
+                    const matchesMonth = ev.months.includes(monthNum);
+                    const matchesCategory = (currentCalendarFilter === 'all') || (ev.category === currentCalendarFilter);
+                    return matchesMonth && matchesCategory;
+                });
+
+                const monthCard = document.createElement('div');
+                monthCard.className = 'bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex flex-col justify-between space-y-3 hover:border-brand-300 transition';
+
+                let eventsListHTML = '';
+                
+                if (eventsForMonth.length > 0) {
+                    eventsForMonth.forEach(ev => {
+                        eventsListHTML += `
+                            <div class="group relative cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-slate-50 border ${ev.borderColor} hover:bg-slate-100 transition"
+                                 onmouseenter="showTooltip(event, '${ev.title}', '${ev.org}', '${ev.type}', '${ev.description}')"
+                                 onmouseleave="hideTooltip()"
+                                 onclick="showMobileModal('${ev.title}', '${ev.org}', '${ev.type}', '${ev.description}')">
+                                <span class="w-2.5 h-2.5 rounded-full ${ev.badgeBg} flex-shrink-0"></span>
+                                <div class="truncate">
+                                    <p class="font-bold text-slate-800 text-xs truncate leading-tight">${ev.title}</p>
+                                    <p class="text-[10px] text-slate-500 truncate">${ev.type}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                } else {
+                    eventsListHTML = `
+                        <div class="h-20 flex items-center justify-center text-[11px] text-slate-400 italic">
+                            Sem editais específicos no filtro
+                        </div>
+                    `;
+                }
+
+                monthCard.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                        <h3 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-lg bg-slate-100 text-slate-700 text-xs flex items-center justify-center font-semibold">${monthNum}</span>
+                            ${month}
+                        </h3>
+                        <span class="text-[10px] font-semibold text-slate-400">${eventsForMonth.length} janela(s)</span>
+                    </div>
+                    <div class="space-y-1.5 flex-1 overflow-y-auto max-h-48 custom-scrollbar">
+                        ${eventsListHTML}
+                    </div>
+                `;
+
+                gridContainer.appendChild(monthCard);
+            });
+        }
+
+        function filterCalendarCategory(cat) {
+            currentCalendarFilter = cat;
+            
+            document.querySelectorAll('.cal-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-slate-100', 'text-slate-700');
+            });
+
+            event.target.classList.remove('bg-slate-100', 'text-slate-700');
+            event.target.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+
+            renderCalendar();
+        }
+
+        function showTooltip(e, title, org, type, desc) {
+            const tooltip = document.getElementById('calendarTooltip');
+            const content = document.getElementById('tooltipContent');
+
+            content.innerHTML = `
+                <p class="font-bold text-brand-300 text-sm leading-tight">${title}</p>
+                <p class="text-[11px] text-slate-300 font-medium">${org} • <span class="text-amber-400">${type}</span></p>
+                <p class="text-[11px] text-slate-400 pt-1 border-t border-slate-800 leading-relaxed">${desc}</p>
+            `;
+
+            tooltip.classList.remove('hidden');
+
+            const x = e.clientX + 15;
+            const y = e.clientY + 15;
+
+            tooltip.style.left = `${Math.min(x, window.innerWidth - 300)}px`;
+            tooltip.style.top = `${Math.min(y, window.innerHeight - 150)}px`;
+        }
+
+        function hideTooltip() {
+            document.getElementById('calendarTooltip').classList.add('hidden');
+        }
+
+        function showMobileModal(title, org, type, desc) {
+            if (window.innerWidth < 768) {
+                alert(`${title}\n${org} (${type})\n\n${desc}`);
+            }
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-brand-500', 'text-brand-600', 'font-bold');
+                btn.classList.add('border-transparent', 'text-slate-500', 'font-medium');
+            });
+
+            document.getElementById('content-' + tabId).classList.remove('hidden');
+
+            const activeBtn = document.getElementById('tab-' + tabId);
+            activeBtn.classList.remove('border-transparent', 'text-slate-500', 'font-medium');
+            activeBtn.classList.add('border-brand-500', 'text-brand-600', 'font-bold');
+        }
+
+        function filterOpportunities(type) {
+            const cards = document.querySelectorAll('.opp-card');
+            const btns = document.querySelectorAll('.filter-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('active', 'bg-brand-50', 'text-brand-600', 'border-brand-200');
+                btn.classList.add('bg-slate-50', 'text-slate-600', 'border-slate-200');
+            });
+
+            event.target.classList.add('active', 'bg-brand-50', 'text-brand-600', 'border-brand-200');
+
+            cards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (type === 'all' || category.includes(type)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function searchCards() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.opp-card');
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        window.onload = function() {
+            renderCalendar();
+        };
+    </script>
+</body>
+</html>
